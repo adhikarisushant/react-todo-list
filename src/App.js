@@ -22,7 +22,7 @@ class App extends Component {
 
     const newItem = {
       id: this.state.id,
-      item: this.state.item
+      title: this.state.item
     }
 
     const updatedItems = [...this.state.items, newItem]
@@ -42,7 +42,7 @@ class App extends Component {
             <h3 className="text-capitalize text-center">todo input</h3>
             <TodoInput item={this.state.item} handleChange={this.handleChange} 
             handleSubmit={this.handleSubmit} />
-        <TodoList />
+        <TodoList items={this.state.items} />
           </div>
         </div>
       </div>
